@@ -2,16 +2,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-
     <parent>
         <artifactId>cloud2021</artifactId>
         <groupId>com.atguigu.springcloud</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>cloud-provider-payment8001</artifactId>
 
-
+    <artifactId>cloud-order80</artifactId>
     <dependencies>
 
         <dependency>
@@ -19,7 +17,7 @@
             <artifactId>cloud-common</artifactId>
         </dependency>
 
-<!--spring boot web and actuator-->
+        <!--spring boot web and actuator-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -32,22 +30,22 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
-<!--mybaits-->
+        <!--mybaits-->
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>
         </dependency>
-<!--druid-->
+        <!--druid-->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid-spring-boot-starter</artifactId>
         </dependency>
-<!--mysql connector java-->
+        <!--mysql connector java-->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
-<!--jdbc-->
+        <!--jdbc-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jdbc</artifactId>
@@ -71,6 +69,7 @@
     </dependencies>
 
     <build>
-        <finalName>cloud_payment8001</finalName>
+        <finalName>cloud_order80</finalName>
     </build>
+
 </project>
