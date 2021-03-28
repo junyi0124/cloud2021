@@ -3,6 +3,6 @@
 
 <mapper namespace="com.atguigu.springcloud.dao.PaymentDao">
     <insert id="create" parameterType="Payment" useGeneratedKeys="true" keyProperty="id">
-        insert into payment(
+        INSERT INTO `t_payment` (`serial`,`count`,`price`,`name`) VALUES (#{serial},#{count},#{price},#{name})
     </insert>
 </mapper>
