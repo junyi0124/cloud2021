@@ -1,0 +1,14 @@
+server:
+  port: 7001
+
+eureka:
+  instance:
+    hostname: localhost   #eureka 服务实例名
+  client:
+    register-with-eureka: false   # false表示不向注册中心注册自己
+    fetch-register: false         # false 表示自己不进行检索，因为在积极就是注册中心
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/    # 设置与eureka server交互的地址，查询和注册都是用这个信息
+  server:
+    enable-self-preservation: false # 设为false，关闭自我保护
+    #eviction-interval-timer-in-ms: 4000 # 清理间隔（单位毫秒，默认是60*1000）
