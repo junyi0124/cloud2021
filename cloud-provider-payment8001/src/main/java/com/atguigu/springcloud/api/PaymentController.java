@@ -1,6 +1,6 @@
 package com.atguigu.springcloud.api;
 
-import com.atguigu.springcloud.entites.Payment;
+import com.atguigu.springcloud.entities.Payment;
 import com.atguigu.springcloud.services.PaymentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -53,7 +53,7 @@ public class PaymentController {
         log.info("code is " + code);
         log.warn("code is " + code);
         log.error("code is " + model.getId());
-        return new CommonResult<>(204, "success");
+        return new CommonResult<>(201, "success");
     }
 
     @PutMapping("/{id}")
@@ -65,5 +65,13 @@ public class PaymentController {
             return new CommonResult<Payment>(200, "success", entity);
         }
         return new CommonResult<>(200, "success");
+    }
+
+    @DeleteMapping("/{id}")
+    public CommonResult<Payment> post(@PathVariable("id") long id) {
+        int code = _paymentService.Delete(id);
+        log.info("code is " + code);
+        log.warn("code is " + code);
+        return new CommonResult<>(204, "success");
     }
 }

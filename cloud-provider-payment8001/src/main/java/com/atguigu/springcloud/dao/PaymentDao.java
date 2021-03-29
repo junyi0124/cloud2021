@@ -1,6 +1,6 @@
 package com.atguigu.springcloud.dao;
 
-import com.atguigu.springcloud.entites.Payment;
+import com.atguigu.springcloud.entities.Payment;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;
