@@ -12,9 +12,9 @@
 
   <modules>
     <module>cloud-common</module>
+    <module>cloud-eureka-server7001</module>
     <module>cloud-provider-payment8001</module>
     <module>cloud-order80</module>
-    <module>cloud-eureka-server7001</module>
   </modules>
 
   <properties>
@@ -47,6 +47,7 @@
         <version>${project.version}</version>
       </dependency>
 
+      <!-- Import dependency management from Spring Boot -->
       <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-dependencies</artifactId>
@@ -170,7 +171,15 @@
           <configuration>
             <fork>true</fork>
             <addResources>true</addResources>
+            <executable>true</executable>
           </configuration>
+          <executions>
+            <execution>
+              <goals>
+                <goal>repackage</goal>
+              </goals>
+            </execution>
+          </executions>
         </plugin>
       </plugins>
     </pluginManagement>
