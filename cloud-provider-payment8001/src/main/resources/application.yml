@@ -1,5 +1,5 @@
 server:
-  port: 8001
+  port: ${server_port:8001}
 
 spring:
   application:
@@ -7,7 +7,7 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver #com.mysql.jdbc.Driver  #org.gjt.mm.mysql.Driver
-    url: jdbc:mysql://localhost:33306/db2021?useUnicode=true&charactorEncoding=utf-8&useSSL=false
+    url: jdbc:mysql://localhost:33306/db2021?useUnicode=true&charactorEncoding=utf-8&useSSL=falsee&serverTimezone=Hongkong
     username: junyi
     password: 23456789
 
@@ -20,4 +20,7 @@ eureka:
     register-with-eureka: true   # false表示不向注册中心注册自己
     fetch-register: true         # false 表示自己不进行检索，因为在积极就是注册中心
     service-url:
-      defaultZone: http://localhost:7001/eureka/    # 设置与eureka server交互的地址，查询和注册都是用这个信息
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/    # 设置与eureka server交互的地址，查询和注册都是用这个信息
+  instance:
+    instance-id: ${instance_id:payment8001}
+    prefer-ip-address: true      # 访问路径可以显示ip地址

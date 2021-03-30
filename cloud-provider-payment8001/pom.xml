@@ -77,7 +77,7 @@
     </dependencies>
 
     <build>
-        <finalName>cloud_payment8001</finalName>
+        <finalName>cloud_payment</finalName>
         <pluginManagement>
             <plugins>
                 <plugin>

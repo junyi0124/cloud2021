@@ -2,6 +2,9 @@ package com.atguigu.springcloud.api;
 
 import com.atguigu.springcloud.entities.Payment;
 import com.atguigu.springcloud.services.PaymentService;
+import com.netflix.discovery.DiscoveryClient;
+import com.netflix.discovery.shared.Application;
+import com.netflix.discovery.shared.Applications;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -14,12 +17,13 @@ import java.util.List;
 @Slf4j
 public class PaymentController {
 
+
     @Autowired
     public PaymentController(PaymentService paymentService) {
         _paymentService = paymentService;
     }
 
-    private PaymentService _paymentService;
+    private final PaymentService _paymentService;
 
     @GetMapping()
     public CommonResult<List<Payment>> getList() {
@@ -74,4 +78,6 @@ public class PaymentController {
         log.warn("code is " + code);
         return new CommonResult<>(204, "success");
     }
+
+
 }

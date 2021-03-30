@@ -10,4 +10,4 @@ eureka:
     register-with-eureka: true   # false表示不向注册中心注册自己
     fetch-register: true         # false 表示自己不进行检索，因为在积极就是注册中心
     service-url:
-      defaultZone: http://localhost:7001/eureka/    # 设置与eureka server交互的地址，查询和注册都是用这个信息
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/    # 设置与eureka server交互的地址，查询和注册都是用这个信息
