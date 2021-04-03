@@ -1,0 +1,17 @@
+server:
+  port: ${server_port:8004}
+
+spring:
+  application:
+    name: cloud-payment-service
+
+  cloud:
+    zookeeper:
+      connect-string: localhost:2181,localhost:2182,localhost:2183
+
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver    #  com.mysql.jdbc.Driver  #org.gjt.mm.mysql.Driver
+    url: jdbc:mysql://localhost:33306/db2021?useUnicode=true&charactorEncoding=utf-8&useSSL=falsee&serverTimezone=Hongkong
+    username: junyi
+    password: 23456789
